@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client';
-import { AllCountires } from '../common/interface/countriesInterface';
+import { AllCountries } from '../common/interface/countriesInterface';
 
 const GET_COUNTRIES = gql`
     query GetRepo($code: ID!) {
@@ -16,5 +16,5 @@ const GET_COUNTRIES = gql`
 `;
 
 export const useGetCountries = (options: {}) => {
-    return useQuery<AllCountires>(GET_COUNTRIES, options);
+    return useQuery<AllCountries>(GET_COUNTRIES, options);
 };

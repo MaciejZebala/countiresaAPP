@@ -8,7 +8,7 @@ export interface CountryArray {
     countries: Country[];
 }
 
-export interface AllCountires {
+export interface AllCountries {
     continent: {
         countries: Country[];
     };

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { AllContinents } from '../../common/interface/continentsInterface';
 
+const ContinentsTitle = styled.h1`
+    margin-bottom: 20px;
+`;
+
 const ListWrapper = styled.ul`
     display: flex;
     flex-direction: column;
@@ -37,6 +41,7 @@ const Description = styled.p`
 export const ListContinents: React.FC<AllContinents> = ({ continents }) => {
     return (
         <ListWrapper>
+            <ContinentsTitle>Continents List</ContinentsTitle>
             {continents.map((item) => (
                 <ListLink to={`/continents/${item.code}`} key={item.code}>
                     <Item>
