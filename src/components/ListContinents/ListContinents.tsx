@@ -12,7 +12,7 @@ export const ListContinents: React.FC<AllContinents> = ({ continents }) => {
     return (
         <ListWrapper>
             {continents.map((item) => (
-                <ListItem to="/continents/EU">
+                <ListItem to={`/continents/${item.code}`}>
                     <ItemName>{item.name}</ItemName>
                     <ItemCode>{item.code}</ItemCode>
                 </ListItem>
