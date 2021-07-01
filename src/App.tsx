@@ -10,8 +10,8 @@ const App: React.FC = () => (
     <>
         <GlobalStyles />
         <BrowserRouter>
+            <Navigation />
             <Switch>
-                {/* <Navigation /> */}
                 <Route path="/continents/:code">
                     <Countries />
                 </Route>
