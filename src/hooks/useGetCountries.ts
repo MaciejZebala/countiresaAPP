@@ -1,15 +1,5 @@
 import { gql, useQuery } from '@apollo/client';
-import { AllContinents, Continent } from '../common/interface/continentsInterface';
 import { AllCountires } from '../common/interface/countriesInterface';
-
-const GET_CONTINENTS = gql`
-    query {
-        continents {
-            name
-            code
-        }
-    }
-`;
 
 const GET_COUNTRIES = gql`
     query {
@@ -24,11 +14,6 @@ const GET_COUNTRIES = gql`
         }
     }
 `;
-
-export const useGetContinents = () => {
-    const { data } = useQuery<AllContinents>(GET_CONTINENTS);
-    return data?.continents;
-};
 
 export const useGetCountries = () => {
     const { data } = useQuery<AllCountires>(GET_COUNTRIES);
