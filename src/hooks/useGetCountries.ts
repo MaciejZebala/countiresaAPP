@@ -15,10 +15,6 @@ const GET_COUNTRIES = gql`
     }
 `;
 
-export const useGetCountries = (code: string) => {
-    console.log(code);
-    const { data } = useQuery<AllCountires>(GET_COUNTRIES, {
-        variables: { code },
-    });
-    return data?.continent.countries;
+export const useGetCountries = (options: {}) => {
+    return useQuery<AllCountires>(GET_COUNTRIES, options);
 };
