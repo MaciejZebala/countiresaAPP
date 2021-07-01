@@ -11,7 +11,7 @@ export const ListCountries: React.FC<CountryArray> = ({ countries }) => {
     return (
         <ListCountriesWrapper>
             {countries.map((item) => (
-                <ListCountriesItem>
+                <ListCountriesItem key={item.emoji}>
                     <ItemCountriesName>{item.name}</ItemCountriesName>
                     <ItemCountriesCode>{item.emoji}</ItemCountriesCode>
                     <ItemCountriesCode>{item.languages[0].name}</ItemCountriesCode>

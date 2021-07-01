@@ -11,6 +11,5 @@ const GET_CONTINENTS = gql`
 `;
 
 export const useGetContinents = () => {
-    const { data } = useQuery<AllContinents>(GET_CONTINENTS);
-    return data?.continents;
+    return useQuery<AllContinents>(GET_CONTINENTS);
 };
