@@ -1,7 +1,7 @@
 export interface Country {
     name: string;
     emoji: string;
-    languages: { name: string }[];
+    languages: { name?: string | 'brak danych' }[];
 }
 
 export interface CountryArray {

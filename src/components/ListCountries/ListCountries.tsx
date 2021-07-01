@@ -8,13 +8,17 @@ const ItemCountriesName = styled.p``;
 const ItemCountriesCode = styled.p``;
 
 export const ListCountries: React.FC<CountryArray> = ({ countries }) => {
+    console.log(countries);
+
     return (
         <ListCountriesWrapper>
             {countries.map((item) => (
                 <ListCountriesItem key={item.emoji}>
                     <ItemCountriesName>{item.name}</ItemCountriesName>
                     <ItemCountriesCode>{item.emoji}</ItemCountriesCode>
-                    <ItemCountriesCode>{item.languages[0].name}</ItemCountriesCode>
+                    <ItemCountriesCode>
+                        {item.languages.length > 0 ? item.languages[0].name : 'Brak danych'}
+                    </ItemCountriesCode>
                 </ListCountriesItem>
             ))}
         </ListCountriesWrapper>
